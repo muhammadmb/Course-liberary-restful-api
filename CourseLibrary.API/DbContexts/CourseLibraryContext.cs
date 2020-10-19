@@ -23,7 +23,7 @@ namespace CourseLibrary.API.DbContexts
                     Id = Guid.Parse("d28888e9-2ba9-473a-a40f-e38cb54f9b35"),
                     FirstName = "Berry",
                     LastName = "Griffin Beak Eldritch",
-                    DateOfBirth = new DateTime(1650, 7, 23),
+                    DateOfBirth = new DateTime(1999, 7, 23),
                     MainCategory = "Ships"
                 },
                 new Author()

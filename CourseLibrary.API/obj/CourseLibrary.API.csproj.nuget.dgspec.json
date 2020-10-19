@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\muhammadmagdy\\source\\repos\\CourseLibrary\\CourseLibrary.API\\CourseLibrary.API.csproj": {}
+    "F:\\Projects\\CourseLiberary\\CourseLibrary.API\\CourseLibrary.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\muhammadmagdy\\source\\repos\\CourseLibrary\\CourseLibrary.API\\CourseLibrary.API.csproj": {
+    "F:\\Projects\\CourseLiberary\\CourseLibrary.API\\CourseLibrary.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\muhammadmagdy\\source\\repos\\CourseLibrary\\CourseLibrary.API\\CourseLibrary.API.csproj",
+        "projectUniqueName": "F:\\Projects\\CourseLiberary\\CourseLibrary.API\\CourseLibrary.API.csproj",
         "projectName": "CourseLibrary.API",
-        "projectPath": "C:\\Users\\muhammadmagdy\\source\\repos\\CourseLibrary\\CourseLibrary.API\\CourseLibrary.API.csproj",
-        "packagesPath": "C:\\Users\\muhammadmagdy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\muhammadmagdy\\source\\repos\\CourseLibrary\\CourseLibrary.API\\obj\\",
+        "projectPath": "F:\\Projects\\CourseLiberary\\CourseLibrary.API\\CourseLibrary.API.csproj",
+        "packagesPath": "C:\\Users\\Blu-Ray\\.nuget\\packages\\",
+        "outputPath": "F:\\Projects\\CourseLiberary\\CourseLibrary.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\muhammadmagdy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Blu-Ray\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -38,6 +38,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.9, )"
@@ -71,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
