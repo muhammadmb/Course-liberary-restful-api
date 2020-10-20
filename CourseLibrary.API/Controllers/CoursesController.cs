@@ -33,20 +33,36 @@ namespace CourseLibrary.API.Controllers
             }
             return Ok(_mapper.Map<IEnumerable<CourseDto>>(coursesForAuthors));
         }
-        [HttpGet("{courseId}")]
-        public IActionResult GetCourseFromAuthor(Guid authorId, Guid courseId)
+        [HttpGet("{courseId}", Name = "GetCourseForAuthor")]
+        public IActionResult GetCourseForAuthor(Guid authorId, Guid courseId)
         {
             if (!_coursesLibraryRepository.AuthorExists(authorId))
             {
                 return NotFound();
             }
             var courseForAuthor = _coursesLibraryRepository.GetCourse(authorId, courseId);
-            if (courseForAuthor == null) 
+            if (courseForAuthor == null)
             {
                 return NotFound();
             }
             return Ok(_mapper.Map<CourseDto>(courseForAuthor));
             //return Ok(courseForAuthor);
+        }
+        [HttpPost]
+        public ActionResult<CourseDto> CreateCourseFprAuthor(Guid authorId, CourseCreationDto course)
+        {
+            if (!_coursesLibraryRepository.AuthorExists(authorId))
+            {
+                return NotFound();
+            }
+            var courseEntity = _mapper.Map<Entities.Course>(course);
+            _coursesLibraryRepository.AddCourse(authorId, courseEntity);
+            _coursesLibraryRepository.Save();
+
+            var courseToReturn = _mapper.Map<CourseDto>(courseEntity);
+
+            return CreatedAtRoute("GetCourseForAuthor", new { authorId = authorId, courseId = courseToReturn.Id }, courseToReturn);
+
         }
     }
 }

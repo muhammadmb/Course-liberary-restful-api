@@ -3,6 +3,7 @@ using CourseLibrary.API.Models;
 using CourseLibrary.API.ResouceParameters;
 using CourseLibrary.API.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -64,6 +65,12 @@ namespace CourseLibrary.API.Controllers
             return CreatedAtRoute("GetAuthor", 
                 new{authorId = authorToReturn.Id},
                 authorToReturn);
+        }
+        [HttpOptions]
+        public IActionResult GetAuthorOptions()
+        {
+            Response.Headers.Add("Allow", "GET,OPTIONS,POST");
+            return Ok();
         }
     }
 }
