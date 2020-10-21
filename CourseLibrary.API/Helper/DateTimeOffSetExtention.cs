@@ -11,7 +11,7 @@ namespace CourseLibrary.API.Helper
         {
             var currentDate = DateTime.UtcNow;
             int age = currentDate.Year - dataTimeOffset.Year;
-            Console.WriteLine(dataTimeOffset.AddYears(age));
+            //Console.WriteLine(dataTimeOffset.AddYears(age));
             if (currentDate < dataTimeOffset.AddYears(age))
             {
                 age--;
